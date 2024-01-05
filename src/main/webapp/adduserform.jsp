@@ -7,7 +7,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style><%@include file="/resources/adduserfrom.css"%></style>
+<style>
+	*{
+		margin:0;
+		padding: 0;
+		text-decoration: none;
+	}
+	body{
+		background-color: #9EC8B9;
+		height: 100vmin;
+		box-sizing: border-box;
+	}
+	.data{
+		color:white;
+	}
+</style>
 </head>
 <h3>${msg}</h3>
 <body>

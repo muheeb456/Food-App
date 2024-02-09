@@ -15,11 +15,53 @@
 	}
 	body{
 		background-color: #9EC8B9;
-		height: 100vmin;
-		box-sizing: border-box;
+		height: 100vh;
+		
 	}
+	.form, .data{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.form{
+		height: 100%;
+		justify-content: center;
+	}
+	
 	.data{
-		color:white;
+		align-items: flex-start;
+		font-family: sans-serif;
+		font-size: 20px;
+	}
+	
+	label{
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	
+	input{
+		padding: 5px 5px;
+		font-size: 25px;
+	}
+	
+	input[type=submit] {
+		margin-top: 25px;
+		align-self: center;
+		padding: 8px 30px;
+	}
+	
+	input:focus{
+		border: 2px solid pink;
+		outline: none;
+	}
+	
+	a{
+		text-decoration: none;
+		font-family: sans-serif;
+		margin-top: 25px;
+		background-color: skyblue;
+		padding: 10px;
 	}
 </style>
 </head>
@@ -30,15 +72,15 @@
 		<form:form action="saveuser" modelAttribute="user">
 			<div class=data>
 				<label for="name">Enter Name:</label>
-				<form:input id="name" path="name"/> 
+				<form:input id="name" path="name" class="input"/> 
 				<label for="email">Enter email:</label>
-				<form:input id="email" path="email"/> 
+				<form:input id="email" path="email" class="input"/> 
 				<label for="pwd">Enter password:</label>
-				<form:input id="pwd" path="password"/> 
+				<form:input id="pwd" path="password" class="input"/> 
+				<input type="submit">
 			</div>
-			<input type="submit">
 		</form:form>
+		<a href="adminoptions">Go Back</a>
 	</div>
-<a href="adminoptions">Go Back</a>
 </body>
 </html>

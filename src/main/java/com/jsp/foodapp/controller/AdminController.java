@@ -20,7 +20,7 @@ public class AdminController {
 	
 	@RequestMapping("/adminlogin")
 	public ModelAndView adminlogin() {
-		ModelAndView mav= new ModelAndView("adminloginform");
+		ModelAndView mav= new ModelAndView("index");
 		Admin admin= new Admin();
 		admin.setEmail("muheeb12@gmail.com");
 		admin.setPassword("12345");
@@ -43,7 +43,7 @@ public class AdminController {
 			ModelAndView mav= new ModelAndView("adminoptions");
 			return mav;
 		}
-		ModelAndView mav= new ModelAndView("adminloginform");
+		ModelAndView mav= new ModelAndView("index");
 		mav.addObject("msg","Invalid Credentials");
 		return mav;
 	}
